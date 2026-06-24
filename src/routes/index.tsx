@@ -1,29 +1,37 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { Hero } from "@/components/Hero";
+import { CeoSection } from "@/components/CeoSection";
+import { Projects } from "@/components/Projects";
+import { WhyUs } from "@/components/WhyUs";
+import { LeadForm } from "@/components/LeadForm";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Gianini Web — Sites, blogs e web apps sob medida" },
+      { name: "description", content: "Desenvolvimento de sites, blogs, landing pages e web apps com design, performance e SEO. Fundada por Gabriel Gianini em Arujá, SP." },
+      { property: "og:title", content: "Gianini Web — Sites que convertem" },
+      { property: "og:description", content: "Sites institucionais, blogs, landing pages e web apps sob medida." },
+      { property: "og:type", content: "website" },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <CeoSection />
+        <Projects />
+        <WhyUs />
+        <LeadForm />
+      </main>
+      <Footer />
+    </>
   );
 }
