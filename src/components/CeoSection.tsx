@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useI18n } from "@/i18n";
-import ceoImg from "@/assets/ceo-placeholder.jpg";
+import ceoImg from "@/assets/gabriel-gianini.asset.json";
 
 export function CeoSection() {
   const { t } = useI18n();
@@ -17,7 +17,7 @@ export function CeoSection() {
           <div className="absolute -inset-4 rounded-3xl blur-2xl opacity-50" style={{ background: "var(--gw-gradient)" }} />
           <div className="relative rounded-3xl p-[2px]" style={{ background: "var(--gw-gradient)" }}>
             <img
-              src={ceoImg}
+              src={ceoImg.url}
               alt="Gabriel Gianini, fundador da Gianini Web"
               width={768}
               height={960}
