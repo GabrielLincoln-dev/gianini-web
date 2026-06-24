@@ -18,7 +18,7 @@ export function LeadForm() {
     email: z.string().trim().email(t.form.invalidEmail).max(200),
     phone: z.string().trim().min(8, t.form.invalidPhone).max(30),
     message: z.string().trim().min(10, t.form.required).max(2000),
-    consent: z.literal(true, { errorMap: () => ({ message: t.form.mustAccept }) }),
+    consent: z.literal(true, { message: t.form.mustAccept }),
   });
 
   type FormData = z.infer<typeof schema>;

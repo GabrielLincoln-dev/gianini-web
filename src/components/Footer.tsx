@@ -44,7 +44,7 @@ export function Footer() {
               aria-label="Instagram"
               className="size-10 rounded-full border border-border hover:border-primary/60 hover:text-primary flex items-center justify-center transition-colors"
             >
-              <Instagram className="size-4" />
+              <InstagramIcon className="size-4" />
             </a>
             <a
               href={`https://wa.me/${WHATSAPP}`}
