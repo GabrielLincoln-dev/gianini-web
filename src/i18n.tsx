@@ -143,7 +143,7 @@ const dict = {
       back: "Back to home",
     },
   },
-} as const;
+};
 
 type Dict = typeof dict.pt;
 
