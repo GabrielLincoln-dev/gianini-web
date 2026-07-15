@@ -79,8 +79,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Gianini Web" },
-      { name: "description", content: "Desenvolvimento de sites, blogs, landing pages e web apps sob medida." },
+      { title: "Gianini Web — Criação de sites em Arujá, SP" },
+      { name: "description", content: "Agência de criação de sites em Arujá, SP. Sites institucionais, blogs, landing pages e web apps sob medida para empresas do Alto Tietê e de todo o Brasil." },
       { name: "author", content: "Gianini Web" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -99,7 +99,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>
