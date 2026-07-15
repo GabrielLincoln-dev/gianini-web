@@ -35,14 +35,14 @@ export function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="group relative block rounded-2xl border border-border bg-surface overflow-hidden hover:-translate-y-1 hover:border-primary/60 transition-all"
+              className="group relative block rounded-2xl border border-[#5B127B] bg-[#5B127B] overflow-hidden hover:-translate-y-1 hover:border-[#7a1fa3] transition-all"
             >
-              <div className={`aspect-square ${p.bg} flex items-center justify-center p-8`}>
+              <div className="aspect-square bg-[#5B127B] flex items-center justify-center p-8">
                 <img src={p.logo} alt={p.name} className="max-h-full max-w-full object-contain" loading="lazy" />
               </div>
-              <div className="p-4 flex items-center justify-between gap-2 border-t border-border">
-                <span className="font-medium text-sm">{p.name}</span>
-                <ExternalLink className="size-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
+              <div className="p-4 flex items-center justify-between gap-2 border-t border-[#5B127B]">
+                <span className="font-medium text-sm text-white">{p.name}</span>
+                <ExternalLink className="size-4 text-white/80 group-hover:text-white transition-colors shrink-0" />
               </div>
             </motion.a>
           ))}
