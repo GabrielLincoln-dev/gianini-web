@@ -25,36 +25,27 @@ export function Projects() {
         </div>
 
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {projects.map((p, i) => {
-            const isCs = p.name === "CS Innovation";
-            return (
-              <motion.a
-                key={p.name}
-                href={p.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className={`group relative block rounded-2xl border overflow-hidden hover:-translate-y-1 transition-all ${
-                  isCs ? "border-[#5B127B] bg-[#5B127B] hover:border-[#7a1fa3]" : "border-border bg-surface hover:border-primary/60"
-                }`}
-              >
-                <div className={`aspect-square flex items-center justify-center p-8 ${p.bg}`}>
-                  <img src={p.logo} alt={p.name} className="max-h-full max-w-full object-contain" loading="lazy" />
-                </div>
-                <div className={`p-4 flex items-center justify-between gap-2 border-t ${
-                  isCs ? "border-[#5B127B]" : "border-border"
-                }`}>
-                  <span className={`font-medium text-sm ${isCs ? "text-white" : ""}`}>{p.name}</span>
-                  <ExternalLink className={`size-4 transition-colors shrink-0 ${
-                    isCs ? "text-white/80 group-hover:text-white" : "text-muted-foreground group-hover:text-primary"
-                  }`} />
-                </div>
-              </motion.a>
-            );
-          })}
+          {projects.map((p, i) => (
+            <motion.a
+              key={p.name}
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              className="group relative block rounded-2xl border border-border bg-surface overflow-hidden hover:-translate-y-1 hover:border-primary/60 transition-all"
+            >
+              <div className={`aspect-square ${p.bg} flex items-center justify-center p-8`}>
+                <img src={p.logo} alt={p.name} className="max-h-full max-w-full object-contain" loading="lazy" />
+              </div>
+              <div className="p-4 flex items-center justify-between gap-2 border-t border-border">
+                <span className="font-medium text-sm">{p.name}</span>
+                <ExternalLink className="size-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
+              </div>
+            </motion.a>
+          ))}
         </div>
       </div>
     </section>
