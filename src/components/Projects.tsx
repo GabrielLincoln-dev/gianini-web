@@ -41,7 +41,7 @@ export function Projects() {
                 <img src={p.logo} alt={p.name} className="max-h-full max-w-full object-contain" loading="lazy" />
               </div>
               <div className="p-4 flex items-center justify-between gap-2 border-t border-border">
-                <span className="font-medium text-sm truncate">{p.name}</span>
+                <span className="font-medium text-sm">{p.name}</span>
                 <ExternalLink className="size-4 text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
               </div>
             </motion.a>
