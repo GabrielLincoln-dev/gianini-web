@@ -56,8 +56,8 @@ function Page() {
             <section>
               <h2 className="text-2xl font-semibold mb-3">3. Purpose</h2>
               <p>
-                Your data is used exclusively to contact you, understand your needs and present
-                a commercial proposal. We do not sell, rent or share your data with third parties
+                Your data is used exclusively to contact you, understand your needs and respond
+                to your inquiry. We do not sell, rent or share your data with third parties
                 for marketing purposes.
               </p>
             </section>

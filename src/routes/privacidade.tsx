@@ -56,8 +56,8 @@ function Page() {
             <section>
               <h2 className="text-2xl font-semibold mb-3">3. Finalidade do tratamento</h2>
               <p>
-                Os dados são utilizados exclusivamente para entrar em contato com você, entender
-                sua demanda e apresentar uma proposta comercial. Não comercializamos, alugamos ou
+              Os dados são utilizados exclusivamente para entrar em contato com você, entender
+                sua demanda e responder ao seu interesse. Não comercializamos, alugamos ou
                 compartilhamos seus dados com terceiros para fins de marketing.
               </p>
             </section>
