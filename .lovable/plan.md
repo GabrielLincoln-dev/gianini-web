@@ -1,66 +1,38 @@
+Objetivo: eliminar do site toda linguagem que prometa resultados comerciais diretos (vendas, lucro, leads, faturamento, conversão) e reposicionar a comunicação em torno de construção de presença digital, identidade de marca e autoridade online.
 
-# Site Gianini Web
+Onde está o problema identificado
+- Os textos de marketing vivem principalmente no dicionário bilíngue `src/i18n.tsx` (PT e EN).
+- Expressões como "Sites que convertem", "atrair o público certo e converter visitantes em clientes", "geram resultado mensurável" e "transformar visitantes em clientes" configuram promessas de performance fora do controle direto da agência.
 
-Site institucional bilíngue (PT-BR / EN), single page com rotas adicionais para Política de Privacidade. Fiel à paleta do logo (azul elétrico sobre preto/navy texturizado).
+O que será alterado
+1. Hero (`t.hero.title` e `t.hero.sub`)
+   - Título: deixar de lado "convertem" e focar em "presença digital", "identidade online" ou "autoridade local".
+   - Subtítulo: manter menção a SEO local e visibilidade em Arujá, mas redigir como possibilidade/oportunidade ("fortalecer visibilidade" / "aumentar as chances de ser encontrado") e não como garantia de resultado.
 
-## Identidade visual
+2. CEO / Sobre (`t.ceo.body`)
+   - Remover a frase "geram resultado mensurável no dia a dia".
+   - Reforçar o que é entregue: código próprio, performance, SEO, experiência do usuário e proximidade com o cliente.
 
-- **Cores**: fundo `#05060A` (preto-azulado), superfícies `#0B1224`, primário `#1E90FF → #00BFFF` (gradiente como no logo), texto `#E8F1FF`, mutado `#7A8AA8`.
-- **Tipografia**: Space Grotesk (display) + Inter (body) — moderno tech, combina com o logo geométrico.
-- **Acentos**: gradientes radiais sutis azuis, grão fino no fundo (lembra a textura do logo), sombras com glow azul.
-- **Favicon**: logo GW fornecida.
+3. Por que nós (`t.why.sub` e `t.why.items`)
+   - Subtítulo: reescrever sem "atrair o público certo" e "converter visitantes em clientes".
+   - Itens: manter os benefícios (design, SEO, autoridade, performance, presença, suporte), mas trocar descrições que sugiram resultado garantido.
 
-## Estrutura de rotas (TanStack Start)
+4. Atendimento em Arujá (`t.local.p2`)
+   - Remover "transformar visitantes em clientes".
+   - Focar em ser encontrado, transmitir credibilidade e consolidar presença digital.
 
-```
-src/routes/
-  __root.tsx              # head: favicon GW, fontes, metadata bilíngue
-  index.tsx               # landing (todas seções)
-  privacidade.tsx         # política LGPD (PT)
-  privacy.tsx             # política LGPD (EN)
-```
+5. Formulário de contato (`t.form.title` / `t.form.sub`)
+   - Manter o convite à conversa, mas sem prometer que o envio gerará uma "solução que dá resultado".
 
-## Navbar
+6. Rodapé e outras frases de apoio
+   - Revisar se há alguma promessa residual de crescimento/receita e ajustar.
 
-Fixa, translúcida com blur. Logo GW à esquerda + links âncora (Início, Sobre, Projetos, Por que nós, Contato) + link "Privacidade" + seletor PT/EN à direita. Menu hamburguer em mobile.
+O que será mantido
+- Todas as referências locais de SEO (Arujá, bairros, cidades vizinhas, Alto Tietê).
+- Estrutura de componentes e layout existentes.
+- CTA do WhatsApp e formulário de captura.
+- Páginas de privacidade (LGPD) — o conteúdo é descritivo e não promete resultados; ajustar apenas se alguma frase soe comercial demais.
 
-## Seções da Home
-
-1. **Hero** — 2 colunas. Esquerda: headline ("Sites que convertem. Presença que constrói autoridade."), subtítulo descrevendo a Gianini Web (sites, blogs, landing pages, web apps, fundada em 2024), CTAs "Fale conosco" + "Ver projetos". Direita: logo GW grande com glow animado (framer-motion).
-
-2. **CEO / Sobre o fundador** — 2 colunas invertidas. Esquerda: foto do Gabriel Gianini (cards arredondado, borda gradiente). Direita: parágrafo sobre Gabriel — desenvolvedor formado em ADS pela Eniac, fundador em 2024.
-
-3. **Projetos realizados** — grid estilo "blocos Gutenberg" (card-grid uniforme com bordas marcadas e hover lift). 4 cards clicáveis (target=_blank, rel=noopener):
-   - CS Innovation → https://cs-innovation-six.vercel.app
-   - Orquestra Sinfônica de Arujá → https://orquestrasinfonicaaruja.netlify.app/
-   - Colégio Hipercubo → https://colegiohipercubo.com.br
-   - ONG Raio de Sol → https://institutionalongrsaruja.netlify.app/
-   Logos hospedados via lovable-assets a partir dos uploads.
-
-4. **Por que escolher a Gianini Web** — bullets com ícones (lucide): Design sob medida, SEO técnico, Consolidação de presença digital, Autoridade de marca, Performance e Core Web Vitals, Suporte próximo. Texto persuasivo curto no topo.
-
-5. **Formulário de captura de leads** — campos: Nome, Empresa, Email, Telefone (WhatsApp do cliente), Descrição da dor / necessidade. Validação com Zod + react-hook-form. Checkbox de consentimento LGPD ("Li e concordo com a Política de Privacidade").
-   - **Submit**: monta mensagem formatada e abre `https://wa.me/5511965636396?text=...` com `encodeURIComponent`. Todos os dados (incl. telefone do cliente) vão na mensagem. Nenhum dado é armazenado em backend — comunicação direta via WhatsApp, sem cookies/tracking adicional (mantém escopo LGPD mínimo).
-
-6. **Footer** — endereço (Rua Jacarandás 645, Arujá SP), botões Instagram (@gianini_web) e WhatsApp (+55 11 96563-6396), link para Política de Privacidade, copyright "© 2026 Gianini Web. Todos os direitos reservados."
-
-## Política de Privacidade (LGPD)
-
-Página dedicada com: controlador (Gianini Web), dados coletados (nome, empresa, email, telefone, mensagem), finalidade (contato comercial), base legal (consentimento art. 7º LGPD), compartilhamento (envio via WhatsApp/Meta — citado), direitos do titular (art. 18 LGPD), retenção, contato do encarregado (email + WhatsApp), data da última atualização.
-
-## i18n
-
-Implementação leve sem libs: dicionário PT/EN em `src/i18n/dict.ts`, hook `useT()` com estado em Context + persistência em `localStorage`. Seletor PT/EN na navbar. Rotas separadas só para política (`/privacidade` e `/privacy`); o resto troca conteúdo in-place.
-
-## Detalhes técnicos
-
-- **Assets**: logo GW, logos dos 4 clientes e foto do CEO (será enviada) → upload via `lovable-assets create` → pointers `.asset.json` em `src/assets/`.
-- **Favicon**: link no `__root.tsx` apontando para o asset da logo GW.
-- **SEO**: cada rota com `head()` próprio (title, description, og:title, og:description, og:image=logo GW).
-- **Animações**: framer-motion para fade/slide-up nas seções e glow do logo no hero.
-- **Acessibilidade**: contraste WCAG AA, labels em todos os inputs, foco visível, `aria-label` nos botões sociais.
-- **Sem backend**: nenhum dado persistido; formulário só dispara `wa.me`.
-
-## Próximo passo
-
-Após aprovar o plano, envie a foto do Gabriel para eu incluir na seção do CEO. Posso começar a construção e você anexa a foto na sequência (uso um placeholder temporário até receber).
+Validação
+- `tsc --noEmit` para garantir que nenhuma quebra de tipos ocorra.
+- Leitura rápida das seções alteradas no preview para confirmar fluidez e ausência de promessas.
