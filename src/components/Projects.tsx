@@ -7,7 +7,7 @@ import hipercubo from "@/assets/hipercubo.asset.json";
 import raioSol from "@/assets/ong-raio-sol.asset.json";
 
 const projects = [
-  { name: "CS Innovation", url: "https://cs-innovation-six.vercel.app", logo: cs.url, bg: "bg-[#5B127B]" },
+  { name: "CS Innovation", url: "https://cs-innovation-six.vercel.app", logo: cs.url, bg: "bg-[#5F0F77]" },
   { name: "Orquestra Sinfônica de Arujá", url: "https://orquestrasinfonicaaruja.netlify.app/", logo: orquestra.url, bg: "bg-white" },
   { name: "Colégio Hipercubo", url: "https://colegiohipercubo.com.br", logo: hipercubo.url, bg: "bg-white" },
   { name: "ONG Raio de Sol", url: "https://institutionalongrsaruja.netlify.app/", logo: raioSol.url, bg: "bg-white" },
