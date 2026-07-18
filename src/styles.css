@@ -38,7 +38,7 @@
   --surface-2: #111a32;
   --border: rgba(120, 160, 220, 0.14);
   --muted: #0b1224;
-  --muted-foreground: #7a8aa8;
+  --muted-foreground: #a4b3cf;
   --primary: #1e90ff;
   --primary-foreground: #ffffff;
   --accent: #00bfff;
@@ -46,6 +46,27 @@
 
   --gw-gradient: linear-gradient(135deg, #00bfff 0%, #1e90ff 55%, #0a3a8c 100%);
   --gw-glow: 0 0 80px rgba(30, 144, 255, 0.35);
+
+  --bg-blob-1: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(30, 144, 255, 0.18), transparent 60%);
+  --bg-blob-2: radial-gradient(ellipse 60% 50% at 100% 20%, rgba(0, 191, 255, 0.10), transparent 60%);
+}
+
+.light {
+  --background: #f6f9ff;
+  --foreground: #0b1224;
+  --surface: #ffffff;
+  --surface-2: #eef3fb;
+  --border: rgba(15, 40, 90, 0.14);
+  --muted: #eef3fb;
+  --muted-foreground: #4a5875;
+  --primary: #0a3a8c;
+  --primary-foreground: #ffffff;
+  --accent: #1e90ff;
+  --ring: #1e90ff;
+
+  --gw-glow: 0 0 80px rgba(30, 144, 255, 0.25);
+  --bg-blob-1: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(30, 144, 255, 0.12), transparent 60%);
+  --bg-blob-2: radial-gradient(ellipse 60% 50% at 100% 20%, rgba(0, 191, 255, 0.08), transparent 60%);
 }
 
 @layer base {
@@ -60,10 +81,9 @@
     color: var(--foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
-    background-image:
-      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(30, 144, 255, 0.18), transparent 60%),
-      radial-gradient(ellipse 60% 50% at 100% 20%, rgba(0, 191, 255, 0.10), transparent 60%);
+    background-image: var(--bg-blob-1), var(--bg-blob-2);
     background-attachment: fixed;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
