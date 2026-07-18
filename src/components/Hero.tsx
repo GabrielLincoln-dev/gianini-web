@@ -16,10 +16,8 @@ export function Hero() {
           <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-primary/90 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/5">
             {t.hero.eyebrow}
           </span>
-          <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.05]">
+          <h1 className="mt-6 text-[clamp(1.5rem,7vw,3.75rem)] font-bold leading-tight whitespace-nowrap">
             {t.hero.title}
-            <br />
-            <span className="text-gradient">{t.hero.titleAccent}</span>
           </h1>
           <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl">{t.hero.sub}</p>
           <div className="mt-9 flex flex-wrap gap-3">

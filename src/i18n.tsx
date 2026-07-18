@@ -13,10 +13,9 @@ const dict = {
       contact: "Contato",
       privacy: "Privacidade",
     },
-    hero: {
-      eyebrow: "Gianini Web · Agência de sites em Arujá desde 2024",
-      title: "Presença digital e identidade online em Arujá.",
-      titleAccent: "Presença digital que constrói autoridade no Alto Tietê.",
+      hero: {
+        eyebrow: "Gianini Web · Agência de sites em Arujá desde 2024",
+        title: "Criação de sites e identidade digital em Arujá",
       sub: "Somos uma agência de desenvolvimento web em Arujá, especializada em sites institucionais, blogs, landing pages e web apps sob medida para empresas, comércios, escolas, clínicas e profissionais autônomos da cidade e de toda a região. Unimos design exclusivo, performance real e SEO técnico focado no público local, para fortalecer a visibilidade do seu negócio no Google quando alguém buscar seus serviços em Arujá, Santa Isabel, Itaquaquecetuba, Guarulhos e Mogi das Cruzes.",
       ctaPrimary: "Fale com um especialista em Arujá",
       ctaSecondary: "Ver projetos realizados",
@@ -114,8 +113,7 @@ const dict = {
     },
     hero: {
       eyebrow: "Gianini Web · Web agency in Arujá, Brazil since 2024",
-      title: "Digital presence and online identity in Arujá.",
-      titleAccent: "Digital presence that builds authority across Alto Tietê.",
+      title: "Web design and digital identity in Arujá",
       sub: "We are a web development agency based in Arujá — SP, Brazil, specialized in custom institutional websites, blogs, landing pages and web apps for local businesses, shops, schools, clinics and independent professionals. We combine unique design, real performance and technical SEO focused on the local audience to strengthen your business's visibility on Google when people search for your services in Arujá, Santa Isabel, Itaquaquecetuba, Guarulhos and Mogi das Cruzes.",
       ctaPrimary: "Talk to a specialist in Arujá",
       ctaSecondary: "See selected work",
