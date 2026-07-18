@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import gwLogo from "../assets/gw-logo.asset.json";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { I18nProvider } from "../i18n";
+import { ThemeProvider } from "../theme";
 
 function NotFoundComponent() {
   return (
