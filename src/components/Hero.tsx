@@ -44,13 +44,13 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.1 }}
-          className="relative flex justify-center lg:justify-end"
+          className="relative flex justify-center lg:justify-end order-1 lg:order-2"
         >
-          <div className="relative">
+          <div className="relative w-full max-w-[280px] sm:max-w-[360px] lg:max-w-[420px] aspect-square">
             <motion.div
               animate={{ opacity: [0.5, 0.9, 0.5] }}
               transition={{ duration: 4, repeat: Infinity }}
-              className="absolute -inset-10 rounded-full blur-3xl"
+              className="absolute -inset-6 sm:-inset-10 rounded-full blur-3xl pointer-events-none"
               style={{ background: "radial-gradient(circle, rgba(30,144,255,0.45), transparent 70%)" }}
             />
             <motion.img
@@ -58,12 +58,13 @@ export function Hero() {
               alt="Gianini Web"
               width={420}
               height={420}
-              className="relative rounded-3xl border border-border shadow-2xl"
+              className="relative w-full h-full object-contain rounded-3xl border border-border shadow-2xl"
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             />
           </div>
         </motion.div>
+
       </div>
     </section>
   );
