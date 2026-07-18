@@ -6,19 +6,21 @@ import gwLogo from "@/assets/gw-logo.asset.json";
 export function Hero() {
   const { t } = useI18n();
   return (
-    <section id="home" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-12 items-center">
+    <section id="home" className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
+          className="min-w-0 order-2 lg:order-1"
         >
-          <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-primary/90 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/5">
+          <span className="inline-flex items-center gap-2 text-[10px] sm:text-xs uppercase tracking-[0.2em] text-primary/90 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/5">
             {t.hero.eyebrow}
           </span>
-          <h1 className="mt-6 text-[clamp(1.5rem,7vw,3.75rem)] font-bold leading-tight whitespace-nowrap">
+          <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] break-words">
             {t.hero.title}
           </h1>
+
           <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl">{t.hero.sub}</p>
           <div className="mt-9 flex flex-wrap gap-3">
             <a
@@ -42,13 +44,13 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.1 }}
-          className="relative flex justify-center lg:justify-end"
+          className="relative flex justify-center lg:justify-end order-1 lg:order-2"
         >
-          <div className="relative">
+          <div className="relative w-full max-w-[280px] sm:max-w-[360px] lg:max-w-[420px] aspect-square">
             <motion.div
               animate={{ opacity: [0.5, 0.9, 0.5] }}
               transition={{ duration: 4, repeat: Infinity }}
-              className="absolute -inset-10 rounded-full blur-3xl"
+              className="absolute -inset-6 sm:-inset-10 rounded-full blur-3xl pointer-events-none"
               style={{ background: "radial-gradient(circle, rgba(30,144,255,0.45), transparent 70%)" }}
             />
             <motion.img
@@ -56,12 +58,13 @@ export function Hero() {
               alt="Gianini Web"
               width={420}
               height={420}
-              className="relative rounded-3xl border border-border shadow-2xl"
+              className="relative w-full h-full object-contain rounded-3xl border border-border shadow-2xl"
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             />
           </div>
         </motion.div>
+
       </div>
     </section>
   );
