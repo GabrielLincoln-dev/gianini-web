@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useI18n } from "@/i18n";
 import gwLogo from "@/assets/gw-logo.asset.json";
 
@@ -14,7 +14,6 @@ export function Hero() {
           transition={{ duration: 0.7 }}
         >
           <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-primary/90 px-3 py-1.5 rounded-full border border-primary/30 bg-primary/5">
-            <Sparkles className="size-3.5" />
             {t.hero.eyebrow}
           </span>
           <h1 className="mt-6 text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.05]">
