@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import gwLogo from "../assets/gw-logo.asset.json";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { I18nProvider } from "../i18n";
+import { ThemeProvider } from "../theme";
 
 function NotFoundComponent() {
   return (
@@ -116,9 +117,11 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <I18nProvider>
-        <Outlet />
-      </I18nProvider>
+      <ThemeProvider>
+        <I18nProvider>
+          <Outlet />
+        </I18nProvider>
+      </ThemeProvider>
     </QueryClientProvider>
   );
 }

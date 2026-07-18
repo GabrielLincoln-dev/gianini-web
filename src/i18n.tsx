@@ -215,13 +215,12 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>("pt");
 
   useEffect(() => {
-    const stored = typeof window !== "undefined" ? (localStorage.getItem("gw-lang") as Lang | null) : null;
-    if (stored === "pt" || stored === "en") setLangState(stored);
+    // Sempre começa em português; mudanças do usuário só valem para a sessão atual.
+    setLangState("pt");
   }, []);
 
   const setLang = (l: Lang) => {
     setLangState(l);
-    if (typeof window !== "undefined") localStorage.setItem("gw-lang", l);
   };
 
   return <I18nContext.Provider value={{ lang, setLang, t: dict[lang] }}>{children}</I18nContext.Provider>;

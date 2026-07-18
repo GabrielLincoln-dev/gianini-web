@@ -1,11 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, Sun, Moon } from "lucide-react";
 import { useI18n } from "@/i18n";
+import { useTheme } from "@/theme";
 import gwLogo from "@/assets/gw-logo.asset.json";
 
 export function Navbar() {
   const { t, lang, setLang } = useI18n();
+  const { theme, toggle } = useTheme();
   const [open, setOpen] = useState(false);
 
   const links = [
@@ -39,6 +41,14 @@ export function Navbar() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <button
+            onClick={toggle}
+            className="inline-flex items-center justify-center size-9 rounded-full border border-border hover:border-primary/60 hover:text-primary transition-colors"
+            aria-label={theme === "dark" ? "Ativar tema claro" : "Ativar tema escuro"}
+            title={theme === "dark" ? "Tema claro" : "Tema escuro"}
+          >
+            {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
+          </button>
           <button
             onClick={() => setLang(lang === "pt" ? "en" : "pt")}
             className="hidden md:inline-flex items-center gap-1.5 text-xs uppercase tracking-wider px-3 py-1.5 rounded-full border border-border hover:border-primary/60 hover:text-primary transition-colors"
