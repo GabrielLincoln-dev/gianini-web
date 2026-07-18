@@ -1,11 +1,13 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, Sun, Moon } from "lucide-react";
 import { useI18n } from "@/i18n";
+import { useTheme } from "@/theme";
 import gwLogo from "@/assets/gw-logo.asset.json";
 
 export function Navbar() {
   const { t, lang, setLang } = useI18n();
+  const { theme, toggle } = useTheme();
   const [open, setOpen] = useState(false);
 
   const links = [
