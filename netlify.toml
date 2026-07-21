@@ -1,0 +1,26 @@
+# Netlify build configuration for TanStack Start (SSR via Nitro `netlify` preset).
+# The Nitro build emits functions + static assets under `.netlify/` which the
+# Netlify build system detects automatically — no publish dir override needed.
+
+[build]
+  command = "bun run build"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Aggressive caching for hashed build assets
+[[headers]]
+  for = "/_build/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Long cache for static images/fonts served from /assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
