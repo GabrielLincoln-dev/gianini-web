@@ -94,6 +94,39 @@
   }
 }
 
+/* ============ Accessibility widget ============ */
+html {
+  font-size: calc(16px * var(--a11y-font-scale, 1));
+}
+html[data-a11y-filter="protanopia"] { filter: url("#a11y-protanopia"); }
+html[data-a11y-filter="deuteranopia"] { filter: url("#a11y-deuteranopia"); }
+html[data-a11y-filter="tritanopia"] { filter: url("#a11y-tritanopia"); }
+html[data-a11y-filter="grayscale"] { filter: grayscale(1); }
+html[data-a11y-filter="high-contrast"] { filter: contrast(1.4); }
+
+html.a11y-underline a { text-decoration: underline !important; text-underline-offset: 3px; }
+html.a11y-big-cursor,
+html.a11y-big-cursor * {
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'><path d='M4 2 L4 32 L12 24 L18 36 L24 34 L18 22 L30 22 Z' fill='%23ffffff' stroke='%23000' stroke-width='2'/></svg>") 2 2, auto !important;
+}
+html.a11y-pause *, html.a11y-pause *::before, html.a11y-pause *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+html.a11y-dyslexia body,
+html.a11y-dyslexia h1,
+html.a11y-dyslexia h2,
+html.a11y-dyslexia h3,
+html.a11y-dyslexia h4 {
+  font-family: Verdana, "Trebuchet MS", Tahoma, sans-serif !important;
+}
+html.a11y-spacing body {
+  letter-spacing: 0.05em;
+  word-spacing: 0.12em;
+  line-height: 1.8;
+}
+
 @utility text-gradient {
   background: var(--gw-gradient);
   -webkit-background-clip: text;
