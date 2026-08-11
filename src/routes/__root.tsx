@@ -84,6 +84,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Gianini Web — Criação de sites em Arujá, SP" },
       { name: "description", content: "Agência de criação de sites em Arujá, SP. Sites institucionais, blogs, landing pages e web apps sob medida para empresas do Alto Tietê e de todo o Brasil." },
       { name: "author", content: "Gianini Web" },
+      { name: "google-site-verification", content: "xffevQ9NAkGhqURj1HVPOPaxpI6puLVTtGte41zo5Zk" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:title", content: "Gianini Web — Criação de sites em Arujá, SP" },
